@@ -129,7 +129,9 @@ st.caption("Understands English, Hindi, Hinglish, emojis and more")
 def load_model():
     return pipeline(
         "sentiment-analysis",
-        model="cardiffnlp/twitter-xlm-roberta-base-sentiment"
+        model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+        tokenizer="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+        use_fast=False
     )
 
 sentiment_model = load_model()
